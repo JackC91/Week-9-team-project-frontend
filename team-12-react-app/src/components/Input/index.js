@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
+const url = process.env.DATABASE_URL;
 
 //tied input field and addToList button/function together due their linked functionality
 function Input({fetchAPI, topic}) {
@@ -13,7 +14,7 @@ function Input({fetchAPI, topic}) {
    function addToList() {
     
     async function postAPI() {
-      const response = await fetch("http://localhost:3005/user_table",
+      const response = await fetch(`${url}/user_table`,
       {method: "POST",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({task: text, topic : topic})

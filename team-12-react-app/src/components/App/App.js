@@ -4,12 +4,14 @@ import WeekBar from "../WeekBar";
 import MainCard from "../MainCard";
 import React, { useEffect, useState } from "react";
 
+const url = process.env.DATABASE_URL;
+
 function App() {
   const [tasks, setTasks] = useState([]);
 
   //sole function that updates state from data recieved from backend
   async function fetchAPI() {
-    const response = await fetch("http://localhost:3005/user_table");
+    const response = await fetch(`${url}/user_table`);
     const data = await response.json();
     console.log(data.payload.command)
     setTasks(data.payload.rows)

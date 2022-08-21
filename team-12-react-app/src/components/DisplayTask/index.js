@@ -1,12 +1,13 @@
 import React from "react";
 
+const url = process.env.DATABASE_URL;
 
 function DisplayTask({tasks, fetchAPI, topic}){
 
   function changeCompletedStatusDatabase(id) {
 
     async function updateAPI() {
-      const response = await fetch("http://localhost:3005/user_table", {
+      const response = await fetch(`${url}/user_table`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ task_id: id })
@@ -25,7 +26,7 @@ function DisplayTask({tasks, fetchAPI, topic}){
   function deleteTaskFromDatabase(id) {
 
     async function deleteAPI() {
-      const response = await fetch("http://localhost:3005/user_table", {
+      const response = await fetch(`${url}/user_table`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ task_id: id })
