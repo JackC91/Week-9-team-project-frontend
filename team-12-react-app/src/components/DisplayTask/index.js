@@ -13,7 +13,6 @@ function DisplayTask({tasks, fetchAPI, topic}){
         body: JSON.stringify({ task_id: id })
       });
       const data = await response.json()
-      console.log(data.payload.command)
     }
 
     //fetchAPI called around updateAPI to counter updateAPI function only updating database and not updating state when called
@@ -32,7 +31,6 @@ function DisplayTask({tasks, fetchAPI, topic}){
         body: JSON.stringify({ task_id: id })
       });
       const data = await response.json()
-      console.log(data.payload.command)
     }
 
     //fetchAPI called around deleteAPI to counter deleteAPI function only updating database and not updating state when called

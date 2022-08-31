@@ -21,7 +21,6 @@ function Input({fetchAPI, topic}) {
       body: JSON.stringify({task: text, topic : topic})
     })
     const data = await response.json()
-    console.log(data.payload.command)
     }
 
     //fetchAPI called around postAPI to counter postAPI function only updating database and not updating state when called

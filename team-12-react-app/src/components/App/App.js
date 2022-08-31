@@ -15,7 +15,6 @@ function App() {
       method: 'GET'
     });
     const data = await response.json();
-    console.log(data.payload.command);
     setTasks(data.payload.rows)
   }
 
