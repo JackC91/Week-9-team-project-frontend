@@ -20,7 +20,7 @@ function Input({fetchAPI, topic}) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({task: text, topic : topic})
     })
-    const data = await response.json()
+    await response.json()
     }
 
     //fetchAPI called around postAPI to counter postAPI function only updating database and not updating state when called

@@ -30,7 +30,7 @@ function DisplayTask({tasks, fetchAPI, topic}){
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ task_id: id })
       });
-      const data = await response.json()
+      await response.json()
     }
 
     //fetchAPI called around deleteAPI to counter deleteAPI function only updating database and not updating state when called
