@@ -12,11 +12,11 @@ function App() {
   //sole function that updates state from data recieved from backend
   async function fetchAPI() {
     const response = await fetch(`${url}/user_table`,{
-      mode: "cors",
-      method: "GET",
+      mode: 'cors',
+      method: 'GET',
       headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json"
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
       }
     });
     const data = await response.json();
