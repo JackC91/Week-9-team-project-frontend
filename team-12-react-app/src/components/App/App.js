@@ -12,7 +12,6 @@ function App() {
   //sole function that updates state from data recieved from backend
   async function fetchAPI() {
     const response = await fetch(`${url}/user_table`,{
-      mode: 'no-cors',
       method: 'GET'
     });
     const data = await response.json();

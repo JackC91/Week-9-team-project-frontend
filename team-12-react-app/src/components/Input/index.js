@@ -16,7 +16,6 @@ function Input({fetchAPI, topic}) {
     async function postAPI() {
       const response = await fetch(`${url}/user_table`,
       {
-        mode: "no-cors",
         method: "POST",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({task: text, topic : topic})
