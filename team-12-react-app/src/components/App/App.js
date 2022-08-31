@@ -4,7 +4,7 @@ import WeekBar from "../WeekBar";
 import MainCard from "../MainCard";
 import React, { useEffect, useState } from "react";
 
-const url = process.env.DATABASE_URL;
+const url = process.env.REACT_APP_DATABASE_URL;
 
 function App() {
   const [tasks, setTasks] = useState([]);
