@@ -1,6 +1,6 @@
 import React from "react";
 
-const url = process.env.DATABASE_URL;
+const url = process.env.REACT_APP_DATABASE_URL;
 
 function DisplayTask({tasks, fetchAPI, topic}){
 
