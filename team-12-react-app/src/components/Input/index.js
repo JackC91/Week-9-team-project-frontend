@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const url = process.env.DATABASE_URL;
+const url = process.env.REACT_APP_DATABASE_URL;
 
 //tied input field and addToList button/function together due their linked functionality
 function Input({fetchAPI, topic}) {
