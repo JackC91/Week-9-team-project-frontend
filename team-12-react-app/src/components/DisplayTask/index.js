@@ -12,7 +12,7 @@ function DisplayTask({tasks, fetchAPI, topic}){
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ task_id: id })
       });
-      const data = await response.json()
+      await response.json()
     }
 
     //fetchAPI called around updateAPI to counter updateAPI function only updating database and not updating state when called
